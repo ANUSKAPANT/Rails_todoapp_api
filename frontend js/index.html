@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <title>Todo List</title>
+  <style type="text/css">
+  	body{
+    
+    text-align: center;
+	}
+	.container{
+		background-color:  #663141 ;
+	    max-width: 400px;
+		min-height: 80vh;
+		margin: 5% auto;     
+	}
+	input[type=text],
+	input[type=text]:focus{
+	  color: #fff;
+	  border: none;
+	  background: rgba(0,0,0,0.2);
+	  max-width: 400px;
+	}
+	.todos li{
+	    background: #693e46;
+	  }
+	  .delete{
+	    cursor: pointer;
+	  }
+	  .edit{
+	    cursor: pointer;
+	  }
+	  .input-error {
+	    border: 1px solid #dc3545 !important;
+	  }
+	  .filtered {
+	    display: none !important;
+	  }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+	<div class="update d-none py-5">
+		<header class="text-center text-light my-4">
+			<h1 class="mb-4"> Edit Todo</h1>
+		</header>
+	  
+		<form class="editform text-center my-4">
+			<label class="text-light">Edit todo...</label>
+			<input class="form-control m-auto" type="text" name="update" />
+		</form>
+	</div>
+	
+	<div class="main py-5">
+		<header class="text-center text-light my-4">
+			<h1 class="mb-4">Todo List</h1>
+			<form class="search">
+			  <input class="form-control m-auto" type="text" name="search" placeholder="search todos" />
+			</form>
+		</header>
+	  
+		<ul class="list-group todos mx-auto text-light">
+	  
+			  <!-- todo list -->
+		</ul>
+	  
+		<form class="add text-center my-4">
+			<label class="text-light">Add a new todo...</label>
+			<input class="form-control m-auto" type="text" name="add" />
+		</form>
+	  
+	</div>
+
+    
+  </div>
+  <script src="task.js"></script>
+  <script src="app.js"></script>
+ </body>
+</html>
